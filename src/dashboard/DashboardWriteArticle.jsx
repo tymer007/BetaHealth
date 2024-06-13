@@ -1,5 +1,5 @@
 // DashboardWriterProfile.js
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Dashboard, { DashboardItem } from "./Dashboard";
 import {
@@ -12,9 +12,42 @@ import {
   Settings,
 } from "lucide-react";
 import Loader from "../components/Loader";
-import TextEditor from "../dashboard/TextEditor";
+import axios from "axios";
+import FroalaEditor from 'react-froala-wysiwyg';
+import 'froala-editor/css/froala_editor.pkgd.min.css';
+import 'froala-editor/js/froala_editor.pkgd.min.js';
+import 'froala-editor/js/plugins/char_counter.min.js';
+import 'froala-editor/js/plugins/image.min.js';
+import 'froala-editor/js/plugins/save.min.js';
+import './TextEditor.css'
 
-const DashboardWriteArticle = () => {
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+const DashboardWriterProfile = () => {
+  const [content, setContent] = useState('');
+
+  const handleModelChange = (model) => {
+    setContent(model);
+  };
+
+  const editorConfig = {
+    placeholderText: 'Your content goes here...',
+    charCounterCount: true,
+    wordCounter: true,
+    charCounterMax: 6000,
+    saveInterval: 5000,
+    events: {
+      "charCounter.exceeded": function () {
+        alert('You have reached the maximum number of characters.');
+        // notify = () => toast("Limit reached!");
+      },
+    },
+    dragInline: false,
+    fileAllowedTypes: ['image/jpeg', 'image/jpg', 'image/png'],
+    editorClass: 'custom-editor-class'
+  };
+
   return (
     <>
       {/* <div>
@@ -43,26 +76,32 @@ const DashboardWriteArticle = () => {
         </Dashboard>
         <div className="flex-1 p-8 text-center">
           <h1 className="text-2xl font-bold">Write an Article</h1>
-          <p className="text-customOrange">This is your dashboard content.</p>
+          <p className="text-customOrange">Fill in the fields below</p>
 
 
           <div>
             <form action="" className="flex flex-col gap-2 md:gap-4">
-              <input
+              <textarea
                 type="text"
                 name="title"
                 placeholder="Enter your title..."
                 className="placeholder-gray-500 placeholder-opacity-75 placeholder:text-6xl text-6xl pl-1 border-none focus:outline-none"
                 required
               />
-              <input
+
+              <textarea
                 type="text"
                 name="description"
                 placeholder="Insert your description here"
                 className="placeholder-gray-500 placeholder-opacity-75 max-w-full h-12 placeholder:text-xl text-xl text-gray-900 pl-2 pb-2 md:pb-4 border-none focus:outline-none md:w-full"
                 required
               />
-              <TextEditor
+
+              <FroalaEditor
+                tag='textarea'
+                config={editorConfig}
+                model={content}
+                onModelChange={handleModelChange}
               />
 
               <div className="flex flex-col md:flex-row gap-2 md:gap-4 pt-2 md:pt-4">
@@ -98,4 +137,4 @@ const DashboardWriteArticle = () => {
   );
 };
 
-export default DashboardWriteArticle;
+export default DashboardWriterProfile;

@@ -19,7 +19,7 @@ const Loader = () => {
     height: '24px',
     borderRadius: '15px',
     background: 'linear-gradient(#D73D00 0 0) 0/0% no-repeat #4cd1d1',
-    animation: 'l2 4s infinite steps(10)',
+    animation: 'l2 1s infinite steps(10)',
     position: 'relative',
   };
 

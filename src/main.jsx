@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import HomePage from './HomePage'
-import './index.css'
+import './index.css';
 import {BrowserRouter, Routes ,Route} from 'react-router-dom'
 import HomeReader from './pages/home2/HomeReader'
 import HomeExpert from './pages/Home3/HomeExpert'

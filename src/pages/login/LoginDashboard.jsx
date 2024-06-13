@@ -3,16 +3,19 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import '@fortawesome/fontawesome-svg-core/styles.css';
+import { useNavigate } from 'react-router-dom';
 
 const LoginDashboard = () => {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
   });
-
+  const Navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const handleChange = (e) => {
+  const handleChange = async(e) => {
     const { name, value, type, checked } = e.target;
     setFormData({
       ...formData,
@@ -20,22 +23,47 @@ const LoginDashboard = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     console.log(formData);
+      try {
+        const response = await axios.post('https://health-4-u5fi.onrender.com/api/betta/auth/signin', formData);
+        console.log(response.data);
+        const { token } = response.data;
+      localStorage.setItem('accessToken', token);
+      setSuccessMessage('Login successful');
+      setErrorMessage('');
+      setTimeout(() => {
+        Navigate('/HomeExpert'); 
+      }, 3000);
+    } catch (error) {
+      console.error('There was an error submitting the form!', error);
+      setErrorMessage('Login failed. Please check your credentials and try again.');
+      setSuccessMessage('');
+    }
   };
 
   return (
     <div className="flex flex-col md:flex-row min-h-screen bg-white">
       <div className="md:w-2/3 flex justify-center bg-white relative">
         <div className="absolute mx-auto">
-        <img src="./images/logo.png" alt="Logo" className="w-24" />
+        <Link to="/HomeReader"><img src="./images/logo.png" alt="Logo" className="w-32 h-24" /></Link>
         </div>
         <div className="md:w-1/2 flex flex-col justify-center p-14 bg-white ">
           <h1 className="text-3xl font-bold mb-4">
             Welcome back, <span className="text-teal-500">sign in</span> to your Dashboard
           </h1>
           <p className="text-gray-600 mb-6">Access your dashboard and get writing!</p>
+          {successMessage && (
+            <div className="text-green-500 text-center mb-4">
+              {successMessage}
+            </div>
+          )}
+          {errorMessage && (
+            <div className="text-red-500 text-center mb-4">
+              {errorMessage}
+            </div>
+          )}
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
               <label className="block text-customOrange font-bold mb-1">Your email</label>

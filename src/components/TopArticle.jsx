@@ -59,7 +59,7 @@ const articles = [
 
 const ArticleGrid = ({ articles }) => {
   return (
-    <div className="max-w-6xl mx-auto px-4 bg-white">
+    <div className="max-w-full mx-auto px-4 bg-white">
       <h2 className="text-2xl font-bold mb-4">Top Article Reads</h2>
       <div className="block sm:hidden">
         <div className="flex space-x-4 overflow-x-auto scrollbar-hide pb-4">

@@ -39,7 +39,7 @@ const Login = () => {
       setSuccessMessage('Login successful');
       setErrorMessage('');
       setTimeout(() => {
-        Navigate('/'); 
+        Navigate('/HomeReader'); 
       }, 3000);
     } catch (error) {
       console.error('There was an error submitting the form!', error);

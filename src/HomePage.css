@@ -352,7 +352,7 @@ footer {
   bottom: 0;
   border-top: 1.2rem solid;
   border-color: #18CDCD;
-  background-color: #000;
+  background-color: #051E1E;
   color: #fff;
   font-family: "Plus Jakarta Sans", sans-serif;
   margin-top: 3.2rem;
@@ -440,6 +440,98 @@ footer {
 }
 
 
+@media  (min-width: 900px) and (max-width: 1350px) {
+  .hero {
+    height: auto;
+    padding: 4rem 0;
+  }
+
+  .hero-content {
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    padding: 2rem;
+  }
+
+  .hero-writing {
+    max-width: 50%;
+    margin-left: 3.2rem;
+    margin-top: 0;
+  }
+
+  .hero h1 {
+    font-size: 3.0rem;
+    line-height: 4.5rem;
+
+  }
+
+  .hero p {
+    font-size: 1.75rem;
+    line-height: 2.75rem;
+    max-width: 80%;
+  }
+
+  .hero img {
+    max-width: 50%;
+    margin-top: 0;
+  }
+
+  .HeroCircle1,
+  .HeroCircle2,
+  .HeroCircle3 {
+    display: block;
+  }
+
+  .HeroCircle1 {
+    top: 12.28rem;
+    left: 56%;
+    transform: translateX(-50%);
+  }
+
+  .HeroCircle2 {
+    top: 3.42rem;
+    left: 70%;
+  }
+
+  .HeroCircle3 {
+    top: 5.94rem;
+    left: 83%;
+  }
+  .top-articles h2 {
+    font-size: 3.5rem;
+    margin-left: 2rem;
+  }
+
+  .articles {
+    flex-direction: row;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .top-articles article {
+    width: 90%;
+  }
+
+  .feature {
+    width: 90%;
+  }
+  .feature .heading {
+    font-size: 1.5rem;
+  }
+  
+  .feature .writing {
+    font-size: 1.1rem;
+  }
+  .feature .feat-link {
+    margin-left: 8.6rem;
+    font-size: 1.8rem;
+    margin-top: 3rem;
+  
+    color: #D73D00;
+    
+  }
+}
 @media screen and (max-width: 900px) {
 
   .desktop-navigation {
@@ -580,7 +672,9 @@ display: none;
 }
 
 .articles {
-  display: grid;
+  /* display: grid; */
+  flex-direction: column;
+  align-items: center;
   gap: 1.2rem;
   margin-top: 3.2rem;
   margin-left: 3.2rem;
@@ -597,7 +691,9 @@ display: none;
   left: 9rem;
 
 }
-
+.top-articles article {
+  width: 80%;
+}
 .articles article p {
   max-width: 40.7rem;
   margin-top: 1.2rem;
@@ -744,7 +840,14 @@ footer {
     font-size: 2.5rem;
   }
   .articles{
-    margin-left: 0.5rem;
+    margin-left: 3rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .top-articles article{
+    width: 90%;
+
   }
   .articles article img {
     width: 34.8rem;

@@ -57,7 +57,7 @@ const ArticleCarousel = () => {
 
             <Slider {...settings}>
                 {cards.map((card, index) => (
-                    <div key={index} className="p-2 pb-2 cursor-pointer">
+                    <div key={index} className="p-4 pb-4 cursor-pointer">
                         <div className="bg-white rounded-lg shadow-md overflow-hidden h-80">
                             <img src={card.image} alt={card.title} className="w-full h-48 object-cover" />
                             <div className="p-4">

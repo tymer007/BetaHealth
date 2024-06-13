@@ -1,0 +1,111 @@
+.Home-reader {
+    height: 100%;
+    width: 100%;
+  }
+.NavBar-Reader {
+    top: 0;
+    font-family: "DM Sans", sans-serif;
+    width: 100%;
+    height: 9.2rem;
+    color: #fff;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #051E1E;
+    z-index: 10;
+}
+.nav-linkReader {
+    list-style: none;
+    display: flex;
+    gap: 6.4rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    letter-spacing: 0.05rem;
+    margin: 0  5rem;
+}
+.Join-Experts {
+    cursor: pointer;
+}
+
+
+.Book-Consultation span{
+    width: 8.1rem;
+    height: 4.8rem;
+    padding: 1.2rem 2rem 1.2rem 2rem;
+    /* gap: 10px; */
+    border-radius: 5rem ;
+    border: 1px solid;
+    border-color: #486284;
+    background-color: #D73D00;
+    cursor: pointer;
+        
+}
+.bars-R {
+    width: 2.4rem;
+    height: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+  } 
+.bar-R {
+    background: white;
+    height: 0.2rem;
+    border-radius: 5px;
+}
+.bars-R.open .bar-R:first-child {
+    transform: rotate(45deg) translateY(0.75rem);
+    transition: all 0.45s ease-in-out;
+}
+.bars-R.open .bar-R:nth-child(2) {
+    opacity: 0;
+}
+.bars-R.open .bar-R:nth-child(3) {
+    transform: rotate(-45deg) translateY(-0.75rem);
+    transition: all 0.45s ease-in-out;
+}
+
+
+@media screen and (max-width:900px) {
+    
+.nav-linkReader {
+    display: none;
+  }
+  .bars-R {
+    display: flex;
+    margin-left: -6rem;
+  }
+.nav-linkReader {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 9.2rem;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #051E1E;
+    z-index: 20;
+    padding: 2rem;
+    opacity: 99%;
+    box-sizing: border-box;
+  }
+  
+  .nav-linkReader.open {
+    display: flex;
+  }
+  
+  .nav-linkReader li {
+    list-style: none;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .nav-linkReader a {
+    color: white;
+    text-decoration: none;
+  }
+}

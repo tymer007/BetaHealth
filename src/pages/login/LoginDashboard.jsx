@@ -47,7 +47,8 @@ const LoginDashboard = () => {
     <div className="flex flex-col md:flex-row min-h-screen bg-white">
       <div className="md:w-2/3 flex justify-center bg-white relative">
         <div className="absolute mx-auto">
-        <Link to="/HomeReader"><img src="./images/logo.png" alt="Logo" className="w-32 h-24" /></Link>
+        <Link to="/HomeReader"><img src="./images/logo.png" alt="Logo" className="w-20 h-12
+        " /></Link>
         </div>
         <div className="md:w-1/2 flex flex-col justify-center p-14 bg-white ">
           <h1 className="text-3xl font-bold mb-4">

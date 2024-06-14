@@ -110,7 +110,7 @@ const LoginDashboard = () => {
             </button>
           </form>
           <p className="text-center mt-4">
-             Want to work with us? <Link to="/SignUpExpert" ><a href="#" className="text-orange-500">Apply here</a></Link><a href="#" className="text-orange-500">Apply here</a>
+             Want to work with us? <Link to="/SignUpExpert" ><a  className="text-orange-500">Apply here</a></Link>
           </p>
         </div>
       </div>

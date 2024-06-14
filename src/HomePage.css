@@ -837,7 +837,7 @@ footer {
     margin-left: 1.0rem;
     margin-top: 4rem;
   }
-  .hero-writing button {
+  .hero-writing .hero-button {
     display: none;
   }
   .top-articles h2 {

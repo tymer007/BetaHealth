@@ -28,7 +28,7 @@ const HomePage = () => {
               <li>Home</li>
               <li>Contact Us</li>
               <Link to="/SignUpReader"><li>Work With Us</li></Link>
-              <Link to="SignUpReader"><li className='signUp'> Sign up</li></Link>
+              <Link to="/SignUpReader"><li className='signUp'> Sign up</li></Link>
               <Link to="/Login" ><li className='Login'><span>Login</span></li></Link>
             </ul>
             <div class={`bars ${isMobileMenuOpen ? 'open' : ''}`} onClick={toggleMobileMenu}>

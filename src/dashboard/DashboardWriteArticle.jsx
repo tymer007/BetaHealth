@@ -68,7 +68,7 @@ const DashboardWriterProfile = () => {
             text="Consultations"
             alert
           />
-          <DashboardItem icon={<User size={20} />} text="Your Profile" />
+          <Link to="/profile"><DashboardItem icon={<User size={20} />} text="Your Profile" /></Link>
           <hr className="my-3 border-gray-600" />
           <DashboardItem icon={<Settings size={20} />} text="Settings" />
           <DashboardItem icon={<LifeBuoy size={20} />} text="Help" />

@@ -38,10 +38,10 @@ const SignUpReader = () => {
     setErrors((prevErrors) => {
       const newErrors = { ...prevErrors };
       if (name === 'firstName' && updatedValue.trim()) {
-        delete newErrors.firstname;
+        delete newErrors.firstName;
       }
       if (name === 'lastName' && updatedValue.trim()) {
-        delete newErrors.lastname;
+        delete newErrors.lastName;
       }
       if (name === 'email') {
         if (!updatedValue.trim()) {

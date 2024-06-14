@@ -694,12 +694,12 @@ const ApplicationForm = () => {
 
 
                     <div className='flex justify-center'>
-                        <Link to="/LogimExpert"><button
+                        <button
                             type="submit"
                             className="bg-orange-600 text-white py-2 px-2 rounded-full hover:bg-orange-700 w-full"
                         >
                             {step === 1 ? 'Continue' : 'Submit'}
-                        </button></Link>
+                        </button>
 
                     </div>
 

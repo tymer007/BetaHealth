@@ -41,7 +41,7 @@ const HomeReader = () => {
           <div className="mobile-navigation open">
             <ul>
              <Link to="/LoginExpert"><li>Login As Expert</li></Link>
-             <Link to="/SignUpExpert1"><li>Join Our Experts</li></Link>
+             <Link to="/SignUpExpert"><li>Join Our Experts</li></Link>
               <li>Book Consultation</li>
               <li>Contact Us</li>
               <li>About Us</li>

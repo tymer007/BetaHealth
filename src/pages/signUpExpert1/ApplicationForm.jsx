@@ -85,7 +85,7 @@ const ApplicationForm = () => {
     return (
         <div className="min-h-screen flex items-center justify-center bg-white overflow-hidden">
             <div className="w-full max-w-xl bg-white p-6">
-                <img src="logo.png" alt="Logo" className="h-11 w-auto mb-6 mx-auto" />
+                <img src="./images/logo.png" alt="Logo" className="h-11 w-auto mb-6 mx-auto" />
 
                 <form onSubmit={handleSubmit} className="space-y-4">
 
@@ -696,7 +696,7 @@ const ApplicationForm = () => {
                     <div className='flex justify-center'>
                         <Link to="/LogimExpert"><button
                             type="submit"
-                            className="bg-orange-600 text-white py-2 rounded-full hover:bg-orange-700 w-1/5"
+                            className="bg-orange-600 text-white py-2 px-2 rounded-full hover:bg-orange-700 w-full"
                         >
                             {step === 1 ? 'Continue' : 'Submit'}
                         </button></Link>

@@ -1,5 +1,6 @@
 import React from 'react';
 import './HealthApply.css';
+import { Link } from 'lucide-react';
 
 const HealthApply = () => {
   return (
@@ -27,7 +28,7 @@ const HealthApply = () => {
               <p>Lorem ipsum dolor sit amet, Integer malesuada turpis fringilla suscipit. Maecenas ultricies.</p>
             </div>
           </div>
-          <button className="apply-button">Apply Now</button>
+          <Link to="/SignUpExpert1"><button className="apply-button">Apply Now</button></Link>
         </div>
       </div>
     </div>

@@ -8,6 +8,7 @@ import TopArticles from "../../components/TopArticles"
 import HealthApply from "../../components/HomeApply/HealthApply"
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import TopArticle from "../../components/TopArticle"
 
 
 const HomeReader = () => {
@@ -26,7 +27,7 @@ const HomeReader = () => {
           <ul className='nav-linkReader'>
               <Link to="/LoginExpert"><li>Login As Expert</li></Link>
               <li>About Us</li>
-              <Link to="/SignUpExpert1"><li className='Join-Experts '> Join Our Experts</li></Link>
+              <Link to="/SignUpExpert"><li className='Join-Experts '> Join Our Experts</li></Link>
               <li className='Book-Consultation'><span>Book a Consultation</span></li>
           </ul>
           <div class={`bars-R ${isReaderMobileMenuOpen ? 'open' : ''}`} onClick={toggleReaderMobileMenu}>
@@ -50,8 +51,9 @@ const HomeReader = () => {
         )}
       </header>
       <HomeHero  />
+      <TopArticle />
 
-      <section className="top-articles">
+      {/* <section className="top-articles">
         <h2>Top Article Reads</h2>
         <div className="articles">
           <TopArticles 
@@ -72,7 +74,7 @@ const HomeReader = () => {
 
         </div>
         <p  className="see-all">See all</p>
-      </section>
+      </section> */}
 
       <Features />
       <HealthApply />

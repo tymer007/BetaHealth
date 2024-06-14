@@ -1,39 +1,47 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Loader from './Loader';
+// import Loader from './Loader';
 
 const articles = [
-  {
+  { id: 1,
     title: 'Does taking antibiotics during pregnancy harm an unborn child?',
-    image: 'DAWN FM DANCEHALL PLAYLIST.png',
+    image: "./images/Pregnant.jpg",
+    Link: "./ArticlePage11"
   },
-  {
+  { id: 2,
     title: 'How to administer quick and effective first aid',
-    image: 'DAWN FM DANCEHALL PLAYLIST.png',
+    image: "./images/drugs.jpg",
+    Link: ""
   },
-  {
+  { id:3,
     title: 'Everything to know about your heart health, myths and facts.',
-    image: 'DAWN FM DANCEHALL PLAYLIST.png',
+    image: "./images/pexels-pixabay-40568 1.jpg",
+    Link: ""
   },
-  {
+  { id:4,
     title: 'What is the best antiseptic used to treat open wounds?',
-    image: 'DAWN FM DANCEHALL PLAYLIST.png',
+    image: "./images/Hospital.jpg",
+    Link: ""
   },
-  {
+  { id:5,
     title: 'Did cancer exist before man-made chemicals were around?',
-    image: 'DAWN FM DANCEHALL PLAYLIST.png',
+    image: "./images/Cancer img.jpg" ,
+    Link: "./ArticlePage4"
   },
-  {
+  { id:5,
     title: 'Can a man’s testosterone be boosted naturally?',
-    image: 'DAWN FM DANCEHALL PLAYLIST.png',
+    image: "./images/Articles.jpg",
+    Link: ""
   },
-  {
+  { id:6,
     title: 'How can Lyme disease last for years?',
-    image: 'DAWN FM DANCEHALL PLAYLIST.png',
+    image: "./images/Lice.png",
+    Link: "./ArticlePage3"
   },
-  {
+  { id:7,
     title: 'Want to know how antibiotics kill viruses?',
-    image: 'DAWN FM DANCEHALL PLAYLIST.png',
+    image: "./images/pexels-pixabay-40568 1.jpg",
+    Link: ""
   },
 ];
 
@@ -59,13 +67,14 @@ const articles = [
 
 const ArticleGrid = ({ articles }) => {
   return (
-    <div className="max-w-full mx-auto px-4 bg-white">
+    <div className="max-w-full mx-auto px-4 bg-white mt-10">
       <h2 className="text-2xl font-bold mb-4">Top Article Reads</h2>
       <div className="block sm:hidden">
         <div className="flex space-x-4 overflow-x-auto scrollbar-hide pb-4">
           {articles.map((article, index) => (
             <div key={index} className="min-w-[250px] cursor-pointer bg-white rounded-b-lg shadow-md overflow-hidden flex-shrink-0 w-60">
               <img src={article.image} alt={article.title} className="w-full h-40 object-cover" />
+              <Link to={article.Link}>{article.image}</Link>
               <div className="p-6">
                 <h3 className="text-lg font-bold">{article.title}</h3>
               </div>

@@ -5,7 +5,7 @@ import { Share2, Calendar, User, Instagram, Linkedin, Facebook, Twitter } from '
 import Footer from '../../components/Footer';
 
 
-  const ArticlePage11 = () => {
+  const ArticlePage3 = () => {
     // const [article, setArticle] = useState(null);
     // const [relatedArticles, setRelatedArticles] = useState([]);
 
@@ -28,8 +28,7 @@ import Footer from '../../components/Footer';
         <div className="flex flex-col lg:flex-row">
           <div className="w-full lg:w-4/5">
             <div className="mb-4">
-              <h1 className="text-5xl font-bold mb-2">Everythingto Know About Your Heart Health:
-              Myths and Facts for Nigerians</h1>
+              <h1 className="text-5xl font-bold mb-2">How Can Lyme Disease Last for Years?</h1>
 
               <div className="border-t border-gray-600 flex p-2 w-full justify-between">
                 <div className='flex justify-around items-center '>
@@ -37,40 +36,67 @@ import Footer from '../../components/Footer';
                   <img src="./images/Doctors profile image.jpg" className="w-10 h-10 rounded-md" />
                   <div className='flex justify-between items-center transition-all'>
                     <div className="leading-4">
-                      <h4 className="font-semibold text-gray-500">Dr Jane David</h4>
-                      <span className="text-sm text-gray-500">Cardiologist</span>
+                      <h4 className="font-semibold text-gray-500">Dr Fred James</h4>
+                      <span className="text-sm text-gray-500">Famaily Medicine</span>
                     </div>
                   </div>
                 </div>
 
-                <div className='flex justify-around items-center text-gray-500'>{new Date().getDate()}  <Calendar className="w-5 h-5 ml-1" />
+                <div className='flex justify-around items-center text-gray-500'>June 14th, 2024 <Calendar className="w-5 h-5 ml-1" />
                 </div>
 
               </div>
 
 
             </div>
-            <img src="./images/Pregnant.jpg" alt="Article" className="mb-4 w-full h-auto object-cover" />
+            <img src="./images/Lice.png" alt="Article" className="mb-4 w-full h-auto object-cover" />
 
             <div className="prose"  />
-            <p className='text-base'>
-              Pregnancy is a time of great joy and anticipation, but it also brings a heightened sense of responsibility, particularly when it comes to medication use. Dr. Sarah, a renowned obstetrician, emphasizes the importance of understanding which medications are safe during pregnancy and which should be avoided to protect the developing baby.
+            <p className='text-lg'>
+            Lyme disease is a tick-borne illness caused by the bacterium *Borrelia burgdorferi*. While it
+            is more commonly associated with regions like North America and Europe, it’s essential to
+            be aware of its potential impact and understand its chronic nature. In Nigeria, where
+            tick-borne diseases are not as prevalent, Lyme disease might seem like a distant concern.
+            However, global travel and changing environmental conditions mean it's crucial to be
+            informed about such diseases.
+
             </p>
-            <h2 className=' text-base'>Understanding the Risks</h2>
-            <p>
-              Certain medications can pose risks to the unborn child, including congenital disabilities and complications. It’s estimated that about 90% of pregnant individuals in the United States use over-the-counter (OTC) medication during their pregnancies, and 70% take prescription medication. The Food and Drug Administration (FDA) has a classification system that provides a general overview of the safety of drugs during pregnancy and lactation.
+            <h2 className=' text-base'>Understanding Lyme Disease</h2>
+            <p className='text-lg'>
+            Lyme disease is transmitted through the bite of an infected black-legged tick, commonly
+            known as the deer tick. The disease manifests in stages, starting with early localized
+            infection and potentially progressing to early disseminated and late disseminated stages if
+            left untreated.
             </p>
-            <h2>Safe Medications</h2>
-            <p>
-              Most commonly used medications are safe for a limited time during pregnancy, but healthcare providers always recommend checking before taking any medication. For allergies, medications like Chlorpheniramine and Atarax (hydroxyzine) are considered safe. For cold and flu, saline nasal drops, Tylenol (acetaminophen), and Mucinex (guaifenesin) are among the safe options.
+            <h2 className=' text-base'>Symptoms of Lyme Disease:</h2>
+            <p className='text-lg'>
+            - Early Localized Stage: A characteristic "bull's-eye" rash (erythema migrans) at the site of
+            the tick bite, flu-like symptoms such as fever, chills, headache, muscle and joint aches, and
+            swollen lymph nodes.
+            - Early Disseminated Stage: Multiple rashes, migrating pain in joints, heart palpitations, and
+            neurological symptoms like facial palsy.
+            - Late Disseminated Stage: Severe joint pain and swelling, chronic neurological complaints
+            such as numbness, tingling, and memory problems.
             </p>
-            <h2>Medications to Avoid</h2>
-            <p>
-              It’s crucial to avoid long-acting or sustained-released types of cold or flu medications. For constipation, which is common during pregnancy due to hormonal changes, increasing water and fiber intake is recommended before turning to medications.
+            <h2 className=' text-base'>Why Lyme Disease Can Last for Years</h2>
+            <p className='text-lg'>
+            1. Delayed Diagnosis and Treatment:
+              - Early symptoms of Lyme disease can be nonspecific and easily mistaken for other
+              illnesses, leading to delayed diagnosis. Without prompt antibiotic treatment, the bacteria
+              can spread and establish a long-term presence in the body.
+            2. Immune Evasion by the Bacteria:
+              - Borrelia burgdorferi has the ability to evade the immune system. It can change its surface
+              proteins, making it difficult for the immune system to detect and destroy it. This allows the
+              bacteria to persist in the body for extended periods.
+            3. Persistence of Bacteria
             </p>
-            <h2>The Bottom Line</h2>
-            <p>
-              No medication is 100% safe, but some are safer than others. The principles of prescribing in pregnancy include using the lowest effective dose for the shortest possible time and choosing medications due to the lack of information on their use in pregnant women. Dr. Sarah’s advice is clear: consult with a healthcare provider before taking any medication during pregnancy to ensure the safety of the unborn child.
+            <h2 className=' text-base'>Conclusion</h2>
+            <p className='text-lg'>
+              Lyme disease, though rare in Nigeria, can last for years if not properly diagnosed and
+              treated. Understanding the disease, recognizing the symptoms, and taking preventive measures are key to managing and preventing long-term complications. For those affected,
+              seeking comprehensive medical care and adopting a holistic approach to health can help
+              manage chronic symptoms and improve quality of life. Always consult with healthcare
+              professionals for appropriate diagnosis and treatment.
             </p>
           </div>
 
@@ -125,4 +151,4 @@ rounded-lg lg:w-1/5 lg:ml-4 mt-4 lg:mt-0 p-2">
     );
   };
 
-  export default ArticlePage11;
+  export default ArticlePage3;

@@ -27,7 +27,7 @@ const HomePage = () => {
             <ul className='desktop-navigation'>
               <li>Home</li>
               <li>Contact Us</li>
-              <Link to="/SignUpExpert1"><li>Work With Us</li></Link>
+              <Link to="/SignUpReader"><li>Work With Us</li></Link>
               <Link to="SignUpReader"><li className='signUp'> Sign up</li></Link>
               <Link to="/Login" ><li className='Login'><span>Login</span></li></Link>
             </ul>
@@ -52,10 +52,11 @@ const HomePage = () => {
         )}
       </header>
       <HomeHero />
+
       <TopArticle />
 
 
-      <section className="top-articles">
+      {/* <section className="top-articles">
         <h2>Top Article Reads</h2>
         <div className="articles">
           <TopArticles
@@ -76,7 +77,7 @@ const HomePage = () => {
 
         </div>
         <p className="see-all">See all</p>
-      </section>
+      </section> */}
       <Features />
       <Footer />
     </div>
